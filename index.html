@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <div class="balance">
+      <h2>Current Balance</h2>
+      <div id="balanceAmount">$0.00</div>
+    </div>
+
+    <div class="summary">
+      <div class="card">
+        <h3>Total Income</h3>
+        <div id="totalIncome">$0.00</div>
+      </div>
+      <div class="card">
+        <h3>Total Expense</h3>
+        <div id="totalExpense">$0.00</div>
+      </div>
+    </div>
+
+    <section class="form-section">
+      <h3>Add New Transaction</h3>
+      <form id="transactionForm" autocomplete="off">
+        <input type="text" id="transactionName" placeholder="Transaction name (e.g., Salary, Groceries)" required />
+        <input type="number" id="transactionAmount" placeholder="Amount (positive number)" required />
+        <div class="type-row">
+          <label>
+            <input type="radio" name="type" value="income" checked /> Income
+          </label>
+          <label>
+            <input type="radio" name="type" value="expense" /> Expense
+          </label>
+        </div>
+        <button type="submit" id="addBtn">Add Transaction</button>
+      </form>
+      <p id="formMsg" class="msg"></p>
+    </section>
+
+    <section class="history-section">
+      <h3>Transaction History</h3>
+      <ul id="transactionList" class="transaction-list"></ul>
+    </section>
+
+    <div class="footer">
+      <button id="clearAll">Clear All</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
